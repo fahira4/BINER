@@ -1,14 +1,30 @@
-Biner = int(input("Masukkan Bilangan Bulat: "))
+def binertointerger(Biner):
+    """
+    Mengonversi bilangan bulat menjadi string biner.
 
-def bilanganbiner(Biner):
-        return bin(Biner).replace("0b", "")
+    Parameter:
+    - Biner (int): Bilangan bulat yang akan dikonversi ke biner.
 
-biner = bilanganbiner(Biner)
-print(f"Bilangan biner dari {Biner} adalah {biner}")
+    Mengembalikan:
+    - str: Representasi biner dari bilangan bulat tanpa prefiks '0b'.
+    """
+    return bin(Biner).replace("0b", "")
 
 
-Bulat = input("Masukkan Bilangan Biner: ")
+def bulat_ke_biner(angka):
+    """
+    Membulatkan angka desimal ke bilangan bulat terdekat dan
+    mengonversinya menjadi string biner.
 
-bilangan_bulat = int(Bulat, 2)
+    Parameter:
+    - angka (float): Bilangan desimal yang akan dibulatkan dan
+      dikonversi.
 
-print(f"Bilangan bulat dari Biner {Bulat} adalah {bilangan_bulat}")
+    Mengembalikan:
+    - str: Representasi biner dari bilangan bulat hasil pembulatan
+      tanpa prefiks '0b'.
+    """
+    bulat = round(angka)
+    biner = bin(bulat)
+    return biner[2:]
+
