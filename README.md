@@ -19,7 +19,6 @@ Sebelum menginstall package, pastikan Anda sudah menginstal Python dan pip di si
 python --version
 pip --version
 ```
-  Jika Python dan pip sudah terinstal, Anda akan melihat versi yang terpasang. Jika belum terinstal, Anda dapat mengunduh dan memasangnya dari situs resmi Python.
 
 2. Install Package biner
 Setelah memastikan Python dan pip sudah terpasang, Anda dapat menginstall package biner dengan perintah berikut di terminal:
@@ -32,7 +31,6 @@ Setelah proses instalasi selesai, Anda bisa memverifikasi apakah package biner s
 ```
 pip show biner
 ```
-  Perintah ini akan menampilkan informasi tentang package biner, termasuk versi yang terpasang, lokasi instalasi, dan dependensi.
 
 4. Menggunakan Package biner
 Setelah instalasi berhasil, Anda bisa mulai menggunakan package biner dalam proyek Python Anda. Contoh penggunaan dasar dalam Python adalah sebagai berikut:
