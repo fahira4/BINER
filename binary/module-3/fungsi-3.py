@@ -24,7 +24,7 @@ def operasi_not(bil):
     biner_hasil = format(hasil_not & 0b1111, '04b')  # 4 bit padding
     return biner_hasil, hasil_not
 
-print(operasi_not(30))
+
 
 
 
