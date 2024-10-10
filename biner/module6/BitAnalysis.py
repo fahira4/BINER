@@ -1,14 +1,3 @@
-'''
-ATURAN PENGGUNAAN
-
-semua fungsi dibawah ini dapat menerima input berupa bilangan biner dan juga bilangan bulat
-
-1. jika input bilangan bulat
-        fungsi(n)  misal: fungsi(13)
-2. jika input bilangan biner
-        fungsi(0bn)  misal: fungsi(0b1101) -> ada tambahan '0b' didepan input
-'''
-
 # FUNGSI 1
 def setbits(n:int) -> int:
     """
