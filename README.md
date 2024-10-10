@@ -10,3 +10,34 @@ konversi Biner merupakan sebuah fungsi yang dirancang khusus untuk mengubah suat
 5. Manipulasi Bit. Fungsi ini dapat melakukan operasi manipulasi Bit, seperti penggeseran dan pembalikan.
 6. Analisis dan Statistik. Fungsi ini dapat menganalisis bilangan biner, seperti menghitung jumlah bit yang disetel.
 
+## CARA INSTALASI ##
+Langkah-langkah Install Package biner di Pip
+
+1. Pastikan Python dan Pip Terinstal
+Sebelum menginstall package, pastikan Anda sudah menginstal Python dan pip di sistem Anda. Untuk memeriksa apakah sudah terinstal, buka terminal atau command prompt dan jalankan perintah berikut:
+```
+python --version
+pip --version
+```
+Jika Python dan pip sudah terinstal, Anda akan melihat versi yang terpasang. Jika belum terinstal, Anda dapat mengunduh dan memasangnya dari situs resmi Python.
+
+2. Install Package biner
+Setelah memastikan Python dan pip sudah terpasang, Anda dapat menginstall package biner dengan perintah berikut di terminal:
+```
+pip install biner
+```
+
+3. Verifikasi Installasi
+Setelah proses instalasi selesai, Anda bisa memverifikasi apakah package biner sudah terinstal dengan menjalankan perintah berikut:
+```
+pip show biner
+```
+Perintah ini akan menampilkan informasi tentang package biner, termasuk versi yang terpasang, lokasi instalasi, dan dependensi.
+
+4. Menggunakan Package biner
+Setelah instalasi berhasil, Anda bisa mulai menggunakan package biner dalam proyek Python Anda. Contoh penggunaan dasar dalam Python adalah sebagai berikut:
+```
+import biner
+```
+
+
