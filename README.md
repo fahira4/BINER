@@ -10,7 +10,7 @@ Package Biner merupakan sebuah package yang dirancang khusus untuk mengubah suat
 5. Manipulasi Bit. Fungsi ini dapat melakukan operasi manipulasi Bit, seperti penggeseran dan pembalikan.
 6. Analisis dan Statistik. Fungsi ini dapat menganalisis bilangan biner, seperti menghitung jumlah bit yang disetel.
 
-## CARA INSTALASI ##
+## INSTALASI ##
 Langkah-langkah Install Package biner di Pip
 
 1. Pastikan Python dan Pip Terinstal
@@ -32,10 +32,60 @@ Setelah proses instalasi selesai, Anda bisa memverifikasi apakah package biner s
 pip show biner
 ```
 
-4. Menggunakan Package biner
-Setelah instalasi berhasil, Anda bisa mulai menggunakan package biner dalam proyek Python Anda. Contoh penggunaan dasar dalam Python adalah sebagai berikut:
+## CARA PENGGUNAAN ##
+Untuk menggunakan package ini, pastikan Anda sudah mengimpor package biner ke dalam kode Python Anda:
 ```
 import biner
 ```
+1. Modul Konversi
+Modul ini menyediakan fungsi untuk mengonversi bilangan biner ke integer dan bilangan bulat ke biner.
+Fungsi:
+  - binertointeger(bil_biner)
+  - bulat_ke_biner(bil_bulat)
+Contoh penggunaan:
+```
+hasil = biner.binertointeger(1101)
+print(hasil)  # Output: 13
+```
+
+2. Modul Operasi
+Modul ini menyediakan fungsi untuk operasi aritmatika dasar pada bilangan biner yang dihasilkan dari bilangan bulat.
+Fungsi:
+  - binary_addition_from_int(a, b)
+  - binary_subtraction_from_int(a, b)
+  - binary_multiplication_from_int(a, b)
+  - binary_division_from_int(a, b)
+contoh penggunaan:
+```
+hasil = biner.binary_multiplication_from_int(2, 3)
+print(hasil)  # Output: 110
+```
+
+3. Modul Operasi Logika
+Modul ini menyediakan fungsi untuk operasi logika pada bilangan biner.
+Fungsi:
+  - operasi_and(a, b)
+  - operasi_or(a, b)
+  - operasi_xor(a, b)
+  - operasi_not(a)
+contoh penggunaan:
+```
+hasil = biner.operasi_and(13, 15)
+print(hasil)   # output : 1101
+```
+
+4. Modul Ganti dan Cari Bit
+Modul ini menyediakan fungsi untuk mengganti dan mencari bit pada posisi tertentu.
+Fungsi:
+  - ganti_bit(n, pos, nilai)
+  - cari_bit(biner_str, pos)
+contoh penggunaan:
+```
+hasil = biner.ganti_bit(10, 2, 1)
+print(hasil)   # output : 1110
+```
+
+
+
 
 
