@@ -43,4 +43,4 @@ def inverse_bit(n):
 			inverse += '0'
 		# kalau bilangan binernya adalah 1, maka yang disimpan di variabel inverse adalah 1
 			
-	return int(inverse)
+	return (inverse)
