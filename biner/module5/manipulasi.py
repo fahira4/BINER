@@ -1,27 +1,30 @@
-def shift_bit(a):
+def shift_bit(a: int, jumlah_pergeseran: int, arah: str) -> str:
+    """
+    Menggeser bit dari bilangan bulat ke kiri atau kanan dengan jumlah pergeseran yang ditentukan,
+    dan mengembalikan hasil dengan padding minimal 4 digit biner.
 
-	# a = int(input("Masukkan bilangan bulat: "))
+    Args:
+    - a (int): Bilangan bulat yang akan digeser.
+    - jumlah_pergeseran (int): Jumlah bit yang akan digeser.
+    - arah (str): Arah pergeseran, 'kiri' atau 'kanan'.
 
-	biner_a = bin(a)[2: ]
-	print(f'Konversi ke biner: {biner_a}')
-
-	# pada bagian ini, bilangan bulat akan diubah ke bilangan biner terlebih dahulu. Jika
-	# bilangannya sudah menjadi biner, maka bilangan tersebut langsung keluar
-
-	hasil_shift_left = a << 2 # Hasil: 0b101000 (40)
-	# pada bagian ini, bilangan biner tadi akan digeser sebanyak 2 kali ke kiri atau mengkalikan bulat dengan 4
-	hasil_shift_right = a >> 2 # Hasil: 0b10 (2)
-	# kebalikan dari shift kiri, yaitu membagi bilangan bulat dengan 4
-
-	print(f"Shift kiri: {bin(hasil_shift_left)}")   # Output: '0b101000'
-	print(f"Shift kanan: {bin(hasil_shift_right)}") # Output: '0b10'
-	# mengeluarkan hasil pergeseran biner. bin berfungsi mengubah kembali bilangan bulat ke biner
+    Returns:
+    - str: Representasi biner hasil pergeseran dengan minimal 4 digit.
+    """
+    if arah == 'kiri':
+        hasil_shift = a << jumlah_pergeseran
+    elif arah == 'kanan':
+        hasil_shift = a >> jumlah_pergeseran
+    else:
+        raise ValueError("Arah pergeseran harus 'kiri' atau 'kanan'.")
+    
+    return bin(hasil_shift)[2:].zfill(4)  # Menghilangkan '0b' dan menambahkan padding minimal 4 digit
 
 def inverse_bit(a):
 	biner_a = bin(a)[2: ]
-	print(f'Konversi ke biner: {biner_a}')
-	# pada bagian ini, bilangan bulat akan diubah ke bilangan biner terlebih dahulu. Jika
-	# bilangannya sudah menjadi biner, maka bilangan tersebut langsung keluar
+	# print(f'Bilangan biner: {biner_a}')
+	# # pada bagian ini, bilangan bulat akan diubah ke bilangan biner terlebih dahulu. Jika
+	# # bilangannya sudah menjadi biner, maka bilangan tersebut langsung keluar
 	bits = biner_a
 	# variabel baru untuk membalikkan bilangan biner
 	inverse = ''
@@ -38,7 +41,6 @@ def inverse_bit(a):
 			inverse += '0'
 		# kalau bilangan binernya adalah 1, maka yang disimpan di variabel inverse adalah 1
 			
-	print(f"Inverse-nya: {inverse}")
+	return int(inverse)
 
-# untuk memanggil fungsinya, dalam tanda kurung itu harus di isi bilangan bulat. kalau ingin memasukkan bilangan biner maka harus
-# berawalan 0b. dan pada baris ke-6 dan ke-22 cukup hapus saja kalau inputannya bilangan biner
+print(inverse_bit(0b1010))

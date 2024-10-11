@@ -1,90 +1,65 @@
-def int_to_binary(num):
+#FUNGSI 1
+def operasi_tambah(n1: int, n2: int) -> str:
     """
-    Mengonversi bilangan bulat menjadi representasi biner.
+    Menambahkan dua bilangan bulat dan mengembalikan hasilnya dalam bentuk biner dengan minimal 4 digit.
 
     Args:
-        num (int): Bilangan bulat yang akan dikonversi.
+        n1 (int): Bilangan bulat pertama.
+        n2 (int): Bilangan bulat kedua.
 
     Returns:
-        str: Representasi biner dari bilangan bulat, tanpa prefiks '0b'.
-    
-    Contoh:
-        >>> int_to_binary(5)
-        '101'
+        str: Hasil penjumlahan n1 dan n2 dalam bentuk biner dengan padding minimal 4 digit.
     """
-    return bin(num)[2:]  # [2:] untuk menghilangkan prefiks '0b'
+    hasil = bin(n1 + n2)[2:]  # Mengubah hasil penjumlahan ke biner tanpa '0b'
+    return hasil.zfill(4)     # Menambahkan padding minimal 4 digit
 
 
-def binary_addition_from_int(a, b):
+#FUNGSI 2
+def operasi_kurang(n1: int, n2: int) -> str:
     """
-    Menambahkan dua bilangan bulat dan mengembalikan hasilnya dalam bentuk biner.
+    Mengurangkan dua bilangan bulat dan mengembalikan hasilnya dalam bentuk biner dengan minimal 4 digit.
 
     Args:
-        a (int): Bilangan bulat pertama.
-        b (int): Bilangan bulat kedua.
+        n1 (int): Bilangan bulat pertama.
+        n2 (int): Bilangan bulat kedua.
 
     Returns:
-        str: Hasil penjumlahan a dan b dalam bentuk biner.
-    
-    Contoh:
-        >>> binary_addition_from_int(3, 5)
-        '1000'
+        str: Hasil pengurangan n1 dan n2 dalam bentuk biner dengan padding minimal 4 digit.
     """
-    return int_to_binary(a + b)
+    hasil = bin(n1 - n2)[2:]  # Mengubah hasil pengurangan ke biner tanpa '0b'
+    return hasil.zfill(4)     # Menambahkan padding minimal 4 digit
 
 
-def binary_subtraction_from_int(a, b):
+# FUNGSI 3
+def operasi_kali(n1: int, n2: int) -> str:
     """
-    Mengurangkan dua bilangan bulat dan mengembalikan hasilnya dalam bentuk biner.
+    Mengalikan dua bilangan bulat dan mengembalikan hasilnya dalam bentuk biner dengan minimal 4 digit.
 
     Args:
-        a (int): Bilangan bulat pertama.
-        b (int): Bilangan bulat kedua.
+        n1 (int): Bilangan bulat pertama.
+        n2 (int): Bilangan bulat kedua.
 
     Returns:
-        str: Hasil pengurangan a dan b dalam bentuk biner.
-    
-    Contoh:
-        >>> binary_subtraction_from_int(5, 3)
-        '10'
+        str: Hasil perkalian n1 dan n2 dalam bentuk biner dengan padding minimal 4 digit.
     """
-    return int_to_binary(a - b)
+    hasil = bin(n1 * n2)[2:]  # Mengubah hasil perkalian ke biner tanpa '0b'
+    return hasil.zfill(4)     # Menambahkan padding minimal 4 digit
 
 
-def binary_multiplication_from_int(a, b):
+# FUNGSI 4
+def operasi_bagi(n1: int, n2: int) -> str:
     """
-    Mengalikan dua bilangan bulat dan mengembalikan hasilnya dalam bentuk biner.
+    Membagi dua bilangan bulat dan mengembalikan hasilnya dalam bentuk biner dengan minimal 4 digit.
 
     Args:
-        a (int): Bilangan bulat pertama.
-        b (int): Bilangan bulat kedua.
+        n1 (int): Bilangan bulat pembilang.
+        n2 (int): Bilangan bulat penyebut.
 
     Returns:
-        str: Hasil perkalian a dan b dalam bentuk biner.
-    
-    Contoh:
-        >>> binary_multiplication_from_int(2, 3)
-        '110'
+        str: Hasil pembagian n1 dan n2 dalam bentuk biner dengan padding minimal 4 digit.
     """
-    return int_to_binary(a * b)
+    hasil = bin(n1 // n2)[2:]  # Mengubah hasil pembagian ke biner tanpa '0b'
+    return hasil.zfill(4)      # Menambahkan padding minimal 4 digit
 
 
-def binary_division_from_int(a, b):
-    """
-    Membagi dua bilangan bulat dan mengembalikan hasilnya dalam bentuk biner.
-
-    Args:
-        a (int): Bilangan bulat pembilang.
-        b (int): Bilangan bulat penyebut.
-
-    Returns:
-        str: Hasil pembagian a dan b dalam bentuk biner.
-
-    Catatan:
-        Jika b adalah 0, fungsi ini akan menyebabkan ZeroDivisionError.
-
-    Contoh:
-        >>> binary_division_from_int(8, 2)
-        '100'
-    """
-    return int_to_binary(a // b)
+print(operasi_tambah(4,2))
