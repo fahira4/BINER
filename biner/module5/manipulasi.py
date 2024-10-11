@@ -3,7 +3,7 @@ def shift_bit(a):
 	# a = int(input("Masukkan bilangan bulat: "))
 
 	biner_a = bin(a)[2: ]
-	print(f'Konversi ke biner: {biner_a}')
+	print(f'Bilangan Biner: {biner_a}')
 
 	# pada bagian ini, bilangan bulat akan diubah ke bilangan biner terlebih dahulu. Jika
 	# bilangannya sudah menjadi biner, maka bilangan tersebut langsung keluar
@@ -19,7 +19,7 @@ def shift_bit(a):
 
 def inverse_bit(a):
 	biner_a = bin(a)[2: ]
-	print(f'Konversi ke biner: {biner_a}')
+	print(f'Bilangan Biner: {biner_a}')
 	# pada bagian ini, bilangan bulat akan diubah ke bilangan biner terlebih dahulu. Jika
 	# bilangannya sudah menjadi biner, maka bilangan tersebut langsung keluar
 	bits = biner_a
