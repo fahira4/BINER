@@ -45,5 +45,3 @@ def operasi_xor(n1: int, n2: int) -> str:
     """
     hasil_xor = n1 ^ n2
     return format(hasil_xor, '04b')  # Mengembalikan hasil dalam format biner dengan padding minimal 4 bit
-
-print(operasi_and(10,7))

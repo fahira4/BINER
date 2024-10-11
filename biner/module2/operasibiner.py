@@ -60,6 +60,3 @@ def operasi_bagi(n1: int, n2: int) -> str:
     """
     hasil = bin(n1 // n2)[2:]  # Mengubah hasil pembagian ke biner tanpa '0b'
     return hasil.zfill(4)      # Menambahkan padding minimal 4 digit
-
-
-print(operasi_tambah(4,2))

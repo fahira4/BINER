@@ -140,5 +140,3 @@ def hamming(n:int, m:int) -> int:
     except ValueError as e:
         print(e)
         return
-
-
