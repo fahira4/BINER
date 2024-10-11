@@ -11,6 +11,8 @@ def shift_bit(n: int, jumlah_pergeseran: int, arah: str) -> str:
     Returns:
     - str: Representasi biner hasil pergeseran dengan minimal 4 digit.
     """
+    arah = arah.lower()
+
     if arah == 'kiri':
         hasil_shift = n << jumlah_pergeseran
     elif arah == 'kanan':
